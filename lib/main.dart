@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_background/flutter_background.dart';
 import 'package:flutter_webrtc/flutter_webrtc.dart';
 
-import 'src/get_user_media_sample.dart'
-    if (dart.library.html) 'src/get_user_media_sample_web.dart';
+import 'src/call_test.dart';
+// if (dart.library.html) 'src/get_user_media_sample_web.dart';
 import 'src/route_item.dart';
 
 void main() {
@@ -77,12 +77,12 @@ class _MyAppState extends State<MyApp> {
   void _initItems() {
     items = <RouteItem>[
       RouteItem(
-          title: 'GetUserMedia',
+          title: 'Setup Call',
           push: (BuildContext context) {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (BuildContext context) => GetUserMediaSample()));
+                    builder: (BuildContext context) => CallTest()));
           })
     ];
   }
